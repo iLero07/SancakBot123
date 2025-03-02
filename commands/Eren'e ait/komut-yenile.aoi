@@ -1,0 +1,11 @@
+module.exports = {
+    name: "yenile",
+    code: `
+    $deleteCommand[5s]
+    $deleteIn[5s]
+    $updateCommands
+    $onlyForIDs[986204366073655308;Bu komutu <@986204366073655308> dışında kimse kullanamaz!]
+    $description[Komutlar başarıyla yenilendi]
+    $addTimestamp
+    `
+}

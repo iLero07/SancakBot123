@@ -1,0 +1,10 @@
+module.exports = {
+    name:"komutlar",
+    code:`
+    $title[Komutlarım şu şekilde]
+    $description[**Bot sahibine özel komutlar:**
+    \`$getVar[prefix]bakım\`, \`$getVar[prefix]yenile\`
+    **Yetkili komutları:**
+    \`$getVar[prefix]abone\`, \`$getVar[prefix]ban\`, \`$getVar[prefix]duyuru\`, \`$getVar[prefix]kick\`]
+    $footer[Lowrs bot kodlama]`
+}

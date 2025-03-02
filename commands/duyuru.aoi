@@ -1,0 +1,11 @@
+module.exports = {
+    name:"duyuru",
+    code:`
+    $Title[Duyuru kanalına duyuru yapıldı!]
+    $description[<#$getVar[duyurukanal]> kanalına duyurunuz gönderildi!
+    **Duyurunuz şu şekilde :**
+    $noMentionMessage]
+    $channelSendMessage[$getVar[duyurukanal];||@everyone/@here||{newEmbed:{title:Yeni Bir Duyuru Var!}{description:**$noMentionMessage**}{footer:$getVar[footer]}};false]
+    $onlyIf[$noMentionMessage[1]!=;Lütfen duyurunuzu belirtiniz.]
+`
+}

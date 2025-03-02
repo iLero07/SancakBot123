@@ -1,0 +1,7 @@
+module.exports = {
+    name:"mesaj-gönder",
+    aliases:["yaz"],
+    code:`
+    $sendMessage[$message[1]]
+    $deleteCommand`
+}

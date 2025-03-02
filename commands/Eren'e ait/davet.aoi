@@ -1,0 +1,7 @@
+module.exports = {
+    name:"davet",
+    code:`
+    Davet Kodum:
+    $addButton[1;Davet!;link;https://discord.com/oauth2/authorize?client_id=1339676436709114007&permissions=8&integration_type=0&scope=bot;false]
+    $onlyForIDs[986204366073655308;Bu komutu <@986204366073655308> dışında kimse kullanamaz!]`
+}

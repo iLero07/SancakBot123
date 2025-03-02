@@ -1,0 +1,8 @@
+module.exports = {
+    name:"abone",
+    code:`$giveRole[$guildID;$authorID;$getVar[abonerol];Abone Rolü.]
+    Abone rolü başarıyla <@$mentioned[1]> kişisine verildi!
+    $onlyIf[$getVar[bakımModu]!=açık; ]
+    $ifAwaited[$getVar[bakımModu]==açık;{execute:bakımText}]`
+
+}

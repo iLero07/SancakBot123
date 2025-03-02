@@ -1,0 +1,11 @@
+module.exports = {
+    name:"kick",
+    aliases:["at","gönder"],
+    code:`
+    $title[Bir Kullanıcı Sunucudan Atıldı]
+    $description[$mentioned[1] aldı kullanıcı $username tarafından sunucudan atıldı!]
+    $kick[$guildID;$mentioned[1];$noMentionMessage]
+    $onlyPerms[kickmembers;<@!$authorID> Bu Komutu Kullanabilmen için \`Üyeleri At\` Yetkin Olması Gerekiyor!]
+    $onlyIf[$mentioned[1;no]!=undefined;<@!$authorID> Lütfen Atılacak Kullanıcıyı Etiketleyiniz!]
+    `
+}

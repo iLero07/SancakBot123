@@ -1,0 +1,35 @@
+module.exports = [{
+    name: "ban",
+    code: `
+$author[$guildName;$guildIcon]
+$description[
+[$username[$mentioned[1]]](https://discord.com/users/$mentioned[1]) Kullanıcısı Sunucudan Banlandı!]
+$color[Black]
+
+$ban[$guildID;$mentioned[1];0;$noMentionMessage]
+
+$suprressErrors[Bir Hata Oluştu!]
+
+$onlyPerms[kickmembers;<@!$authorID> Bu Komutu Kullanabilmen için \`Üyeleri Yasakla\` Yetkin Olması Gerekiyor!]
+
+$onlyIf[$mentioned[1;no]!=undefined;<@!$authorID> Lütfen Banlanacak Kullanıcıyı Etiketleyiniz!]
+`
+},{
+    name: "unban",
+    code: `
+$reply
+
+\`$username[$message[1]]\` Kullanıcısının Banı Kaldırıldı!
+
+$unban[$message[1];$guildID]
+
+$suprressErrors[Bir Hata Oluştu!]
+
+$onlyPerms[kickmembers;<@!$authorID> Bu Komutu Kullanabilmen için \`Üyeleri Yasakla\` Yetkin Olması Gerekiyor!]
+
+$onlyIf[$isNumber[$message[1]]!=false;<@!$authorID> Bunun Bir ID Olduğunu Sanmıyorum!]
+$onlyIf[$message[1]!=;<@!$authorID> Banı Kaldırılacak Kullancının ID'sini Giriniz!]
+$onlyIf[$getVar[bakımModu]!=açık; ]
+$ifAwaited[$getVar[bakımModu]==açık;{execute:bakımText}]
+`
+}]

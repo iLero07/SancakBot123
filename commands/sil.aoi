@@ -1,0 +1,19 @@
+module.exports = [{
+  name: "sil",
+  aliases: ['temizle'],
+  code: `
+🚀 | **$message** Tane Mesaj Uzaya Uçtu
+
+$clear[$message]
+
+$onlyIf[$message<101;❌ | En Fazla \`100\` Tane Mesaj Silebilirim!]
+
+$onlyIf[$message>1;❌ | En Az \`2\` Tane Mesaj Silebilirim!]
+
+$onlyIf[$isNumber[$message]!=false;❌ | Girmiş Olduğunuz şey Bir Sayı Değil!]
+
+$onlyIf[$message!=;❌ | Silinecek Mesaj Sayısını Belirtiniz!]
+
+$onlyPerms[managemessages;❌ | Bu Komutu Kullanmak için \`Mesajları Yönet\` Yetkin Olması Gereekiyor!]
+`
+}]
